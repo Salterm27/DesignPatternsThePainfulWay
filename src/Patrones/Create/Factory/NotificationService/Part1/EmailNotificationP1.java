@@ -1,10 +1,10 @@
-package Patrones.Create.Factory.NotificationService;
+package Patrones.Create.Factory.NotificationService.Part1;
 
-public class EmailNotification {
+public class EmailNotificationP1 {
     private String destinatario;
     private String mensaje;
 
-    public EmailNotification(String destinatario, String mensaje) {
+    public EmailNotificationP1(String destinatario, String mensaje) {
         this.destinatario = destinatario;
         this.mensaje = mensaje;
     }
