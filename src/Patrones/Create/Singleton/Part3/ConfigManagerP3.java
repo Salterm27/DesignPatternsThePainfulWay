@@ -6,9 +6,9 @@ public class ConfigManagerP3 extends ConfigManager {
     private static ConfigManagerP3 instance;
 
     private ConfigManagerP3(String language, String theme, String serviceURL) {
-        this.language = language;
-        this.theme = theme;
-        this.serviceURL = serviceURL;
+        this.setlanguage(language);
+        this.setTheme(theme);
+        this.setServiceURL(serviceURL);
     }
 
     public static ConfigManagerP3 getInstance() {
@@ -16,18 +16,5 @@ public class ConfigManagerP3 extends ConfigManager {
             instance = new ConfigManagerP3("es", "light", "https://api.example.com");
         }
         return instance;
-    }
-
-    public void setlanguage(String language) {
-        this.language = language;
-    }
-    public String getLanguage() {
-        return language;
-    }
-    public String getTheme() {
-        return theme;
-    }
-    public String getServiceURL() {
-        return serviceURL;
     }
 }

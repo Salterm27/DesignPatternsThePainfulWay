@@ -1,6 +1,7 @@
 package Patrones;
 
 import Patrones.Create.CreationalPatternsManager;
+import Patrones.Structure.StructuralPatternsManager;
 import SharedInterfaces.MenuOption;
 
 import java.util.ArrayList;
@@ -12,6 +13,7 @@ public class PracticeExerciseRepo {
 
     public PracticeExerciseRepo() {
         patternGroups.add(new CreationalPatternsManager());
+        patternGroups.add(new StructuralPatternsManager());
     }
 
     public List<MenuOption> getAll() {

@@ -12,6 +12,7 @@ public class Main {
         MenuGroup mainMenu = new MenuGroup("Design Patterns - The Painful Way", "Salir");
         for (MenuOption option : practiceRepo.getAll()) {
             mainMenu.add(option);
+
         }
 
         mainMenu.execute(scanner);
