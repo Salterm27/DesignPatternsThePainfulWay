@@ -1,21 +1,65 @@
-## Cosas para sentir mientras lo hacés
-
-🔴 **¿Quién decide cómo convertir `float` a `int`?**
-`MPTransaction.getAmount()` devuelve `float`. Tu `Pago` tiene `monto: int`.
-¿Redondeás? ¿Truncás? ¿Perdés los centavos silenciosamente?
-Esa decisión vive ahora en el cliente — un lugar donde no debería estar.
-
-🔴 **El problema de la duplicación.**
-Si en otro lugar del sistema (un `AuditService`, un `TaxCalculator`) también
-necesitás convertir `MPTransaction` a `Pago`, vas a copiar ese mismo bloque.
-¿Cuántos lugares van a tener esa lógica de conversión?
-
-🔴 **¿Qué pasa si el SDK cambia?**
-Si en la próxima versión `getAmount()` pasa a llamarse `getValue()`,
-¿en cuántos lugares tenés que hacer el cambio?
-
-🔴 **¿Es trabajo del cliente saber cómo se convierte una `MPTransaction`?**
-El cliente debería simplemente pedir un reporte. No debería conocer
-los detalles internos de cómo MercadoPago nombra sus campos.
+# Ejercicio  — Adapter
+## Paso 2: Revisión del código y respuestas
 
 ---
+
+## ✅ Lo que estaba bien
+
+- La conversión de `MPTransaction` a `Pago` funciona correctamente.
+- El cliente queda limpio — delega la conversión a `ReportGeneratorP2`.
+
+---
+
+## ⚠️ Problema 1 — Violación de SRP
+
+Pusiste `convertirPagos(...)` **dentro de `ReportGeneratorP2`**.
+Eso le da dos responsabilidades a la misma clase:
+
+1. Saber cómo convertir `MPTransaction` → `Pago`
+2. Saber cómo generar un reporte
+
+Un generador de reportes no debería saber nada de MercadoPago.
+Cuando llegue Stripe, ¿también le agregás `convertirStripePayment()`
+a `ReportGenerator`? La clase se convierte en un repositorio de
+conversiones disfrazado de generador de reportes.
+
+---
+
+## ⚠️ Problema 2 — Pérdida silenciosa de datos
+
+```java
+new Pago((int) transaccion.getAmount(), ...)
+```
+
+`getAmount()` devuelve `1500.50f`. El cast a `int` lo convierte en `1500`.
+**Los 50 centavos desaparecen sin ningún aviso.**
+
+- El código compila sin warnings.
+- El código corre sin excepciones.
+- El reporte muestra un monto incorrecto.
+
+En un sistema financiero eso es un bug crítico. La decisión de cómo
+manejar los decimales está enterrada en el medio de un loop,
+sin ninguna documentación ni intención clara.
+
+---
+
+## Respuesta a la pregunta del enunciado
+
+> Si llegan PayPal y Stripe con sus propios objetos incompatibles,
+> ¿cuántas conversiones nuevas aparecen? ¿Es ese el trabajo del cliente?
+
+Con el diseño del Paso 2 necesitarías:
+
+| Proveedor nuevo | Qué hay que agregar a `ReportGenerator` |
+|---|---|
+| Stripe | `convertirStripe(List<StripeCharge>)` + `generateReporte(...)` |
+| PayPal | `convertirPayPal(List<PayPalPayment>)` + `generateReporte(...)` |
+| ... | ... |
+
+`ReportGenerator` crece con cada proveedor nuevo, **por razones
+que no tienen nada que ver con generar reportes**.
+
+No, no es el trabajo del cliente ni del generador de reportes.
+Es exactamente el trabajo del **Adapter** — que es lo que vemos
+en el Paso 3.
