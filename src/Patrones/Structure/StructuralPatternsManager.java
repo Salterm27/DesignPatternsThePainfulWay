@@ -1,12 +1,12 @@
 package Patrones.Structure;
 
-import Patrones.Create.Factory.FactoryPatternManager;
+import Patrones.Structure.Adapter.AdapterPatternManager;
 import SharedInterfaces.PatternGroup;
 
 public class StructuralPatternsManager extends PatternGroup {
     public StructuralPatternsManager() {
         super("Estructurales");
 
-        add(new FactoryPatternManager());
+        add(new AdapterPatternManager());
     }
 }
