@@ -23,18 +23,25 @@ o algo asi.
 Ver el índice en [docs/README.md](docs/README.md).
 
 ## Patrones de Disño estudiados
-### Creacionales (En Progreso)
-  1. Singleton (to be released on v1.0)
+### Creacionales
+  1. Singleton (released on v1.0)
   2. Factory (released on v0.3)
   3. Abstract Factory (released on v0.6)
+  4. Builder (agregado al Backlog)
 
-### Estructurales (No empezado)
-  1. Adapter (No Empezado)
-  2. Decorator (No empezado)
-  3. Composite (No Empezado)
-  4. Facade (No Empezado)
+### Estructurales
+  1. Adapter (planned for v1.25)
+  2. Decorator (Planned for v1.5)
+  3. Composite (planned for v1.75)
+  4. Facade (planned for v2.0)
+  6. Bridge (agregado al Backog)
 
-### Comportamiento (No empezado)
-  1. Strategy (No Empezado)
-  2. State (No Empezado)
+### Comportamiento
+  1. Observer (planned for v2.25)
+  4. Mediator (planned for v2.5)
+  5. Strategy (planned for v2.75)
+  3. State (planned for v3.0)
+  6. Command (agregado al Backlog)
+  7. Chain of Responsibility (agregado al Backlog)
+     
 
