@@ -1,25 +1,12 @@
 package Patrones.Create.Singleton.Part1;
 
-public class ConfigManagerP1 {
-    private String language;
-    private String theme;
-    private String serviceURL;
+import Patrones.Create.Singleton.ConfigManager;
 
-    public ConfigManagerP1(String language, String theme, String serviceURL) {
-        this.language = language;
-        this.theme = theme;
-        this.serviceURL = serviceURL;
+public class ConfigManagerP1 extends ConfigManager {
+    public ConfigManagerP1(String myLanguage, String myTheme, String myServiceURL) {
+        this.language = myLanguage;
+        this.theme = myTheme;
+        this.serviceURL = myServiceURL;
     }
-    public void setlanguage(String language) {
-        this.language = language;
-    }
-    public String getLanguage() {
-        return language;
-    }
-    public String getTheme() {
-        return theme;
-    }
-    public String getServiceURL() {
-        return serviceURL;
-    }
+
 }

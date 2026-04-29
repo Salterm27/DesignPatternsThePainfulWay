@@ -1,9 +1,10 @@
 package Patrones.Create.Singleton.Part2;
 
-import Patrones.Create.Singleton.Part1.ConfigManagerP1;
+
+import Patrones.Create.Singleton.ConfigManager;
 
 public class SyncService {
-    public void sync(ConfigManagerP1 myConfig) {
+    public void sync(ConfigManager myConfig) {
         System.out.println("Sincronizando con URL " + myConfig.getServiceURL());
     }
 }
