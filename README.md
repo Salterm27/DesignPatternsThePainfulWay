@@ -22,9 +22,9 @@ o algo asi.
 
 ## Patrones de Disño estudiados
 ### Creacionales (En Progreso)
-  1. Singleton (No Empezado)
-  2. Factory (En Progreso)
-  3. Abstract Factory (No empezado)
+  1. Singleton (to be released on v1.0)
+  2. Factory (released on v0.3)
+  3. Abstract Factory (released on v0.6)
 
 ### Estructurales (No empezado)
   1. Adapter (No Empezado)
