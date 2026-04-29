@@ -1,4 +1,4 @@
-package Patrones.Structure.Adapter;
+package Patrones.Structure.Adapter.Part1;
 
 import SharedInterfaces.Exercise;
 
@@ -19,7 +19,7 @@ public class AdapterReportGeneratorExerciseP1 implements Exercise {
         losPagos.add(new Pago(10, "ARS","1"));
         losPagos.add(new Pago(10, "USD","2"));
 
-        new ReportGenerator().generateReporte(losPagos);
+        new ReportGeneratorP1().generateReporte(losPagos);
 
     }
 }

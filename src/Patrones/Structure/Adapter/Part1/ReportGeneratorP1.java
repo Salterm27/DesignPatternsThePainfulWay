@@ -1,8 +1,10 @@
-package Patrones.Structure.Adapter;
+package Patrones.Structure.Adapter.Part1;
 
 import java.util.List;
 
-public class ReportGenerator {
+public class ReportGeneratorP1 {
+
+
     public void generateReporte(List<Pago> pagos) {
         System.out.println("Generando reporte de pagos");
         System.out.println("----------------------------------------");

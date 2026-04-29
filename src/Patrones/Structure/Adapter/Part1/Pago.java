@@ -1,4 +1,4 @@
-package Patrones.Structure.Adapter;
+package Patrones.Structure.Adapter.Part1;
 
 public class Pago {
     private int monto;
