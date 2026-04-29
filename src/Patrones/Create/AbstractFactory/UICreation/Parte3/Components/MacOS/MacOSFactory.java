@@ -2,9 +2,9 @@ package Patrones.Create.AbstractFactory.UICreation.Parte3.Components.MacOS;
 
 import Patrones.Create.AbstractFactory.UICreation.Parte3.Components.IButton;
 import Patrones.Create.AbstractFactory.UICreation.Parte3.Components.ICheckbox;
-import Patrones.Create.AbstractFactory.UICreation.Parte3.Components.UIFactory;
+import Patrones.Create.AbstractFactory.UICreation.Parte3.Components.IUIFactory;
 
-public class MacOSFactory extends UIFactory {
+public class MacOSFactory implements IUIFactory {
 
     @Override
     public IButton createButton() {
