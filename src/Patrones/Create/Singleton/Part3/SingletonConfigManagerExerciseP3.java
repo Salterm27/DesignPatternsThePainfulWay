@@ -8,14 +8,14 @@ import SharedInterfaces.Exercise;
 public class SingletonConfigManagerExerciseP3 implements Exercise {
     @Override
     public String getName() {
-        return "Singleton - Parte 2";
+        return "Singleton - Parte 3";
     }
 
     @Override
     public void run() {
 
 
-        System.out.println("Ejercicio Singleton - Parte 2");
+        System.out.println("Ejercicio Singleton - Parte 3");
         // Módulo A: HomeScreen crea su propio ConfigManager
         HomeScreen home = new HomeScreen();
         home.mostrar(ConfigManagerP3.getInstance());
