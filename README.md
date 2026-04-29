@@ -13,12 +13,14 @@ Parte 3) Proponer la solucion "elegante" - usando patrones de diseño y generand
 
 ## Enfoque
 - Java como lenguaje principal.
-- Estructura de carpetas de la seccion anterior
-- En cada carpeta, por cada parte de la resolucion un .md con el enunciado
-- Una propuesta de solucion
+- La documentación (enunciados y respuestas) está en [/docs](docs/README.md).
+- Una propuesta de solucion por cada parte.
 
   
 o algo asi.
+
+## Documentación
+Ver el índice en [docs/README.md](docs/README.md).
 
 ## Patrones de Disño estudiados
 ### Creacionales (En Progreso)
@@ -35,6 +37,5 @@ o algo asi.
 ### Comportamiento (No empezado)
   1. Strategy (No Empezado)
   2. State (No Empezado)
-
 
 
