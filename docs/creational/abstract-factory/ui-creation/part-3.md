@@ -51,3 +51,9 @@ Recibe directamente una `UIFactory`:
 
 4. ¿Qué diferencia hay con el Factory Method del ejercicio anterior?
    Pensá en términos de: ¿cuántos productos crea cada patrón?
+
+---
+
+## Diagrama de clases final
+
+![Diagrama de clases final del Abstract Factory](../abstract_factory_ui_diagram.svg)

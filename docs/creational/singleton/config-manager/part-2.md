@@ -52,3 +52,7 @@ Va a seguir apuntando a la URL vieja.
 Contalos. Cada uno es un punto donde alguien puede olvidarse de sincronizar.
 
 ---
+
+## Diagrama de clases final
+
+![Diagrama de clases final del Singleton](singleton_configmanager_diagram.svg)
