@@ -14,7 +14,7 @@ Parte 3) Proponer la solucion "elegante" - usando patrones de diseño y generand
 ## Enfoque
 - Java como lenguaje principal.
 - La documentación (enunciados y respuestas) está en [/docs](docs/README.md).
-- Una propuesta de solucion por cada parte.
+- Una propuesta de solución por cada parte.
 
   
 o algo asi.
@@ -37,5 +37,4 @@ Ver el índice en [docs/README.md](docs/README.md).
 ### Comportamiento (No empezado)
   1. Strategy (No Empezado)
   2. State (No Empezado)
-
 
