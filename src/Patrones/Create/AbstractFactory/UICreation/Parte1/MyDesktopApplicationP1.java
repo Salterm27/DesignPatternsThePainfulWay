@@ -3,7 +3,7 @@ package Patrones.Create.AbstractFactory.UICreation.Parte1;
 import Patrones.Create.AbstractFactory.UICreation.Parte1.Components.WindowsButton;
 import Patrones.Create.AbstractFactory.UICreation.Parte1.Components.WindowsCheckbox;
 
-public class MyDesktopApplication {
+public class MyDesktopApplicationP1 {
     public void renderUI() {
         WindowsButton button = new WindowsButton();
         WindowsCheckbox checkbox = new WindowsCheckbox();

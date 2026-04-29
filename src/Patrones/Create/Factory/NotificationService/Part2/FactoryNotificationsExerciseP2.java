@@ -5,7 +5,7 @@ import SharedInterfaces.Exercise;
 public class FactoryNotificationsExerciseP2 implements Exercise {
     @Override
     public String getName() {
-        return "Factory - Parte 1";
+        return "Factory - Parte 2";
     }
 
     @Override
