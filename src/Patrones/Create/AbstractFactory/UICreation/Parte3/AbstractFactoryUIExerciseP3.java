@@ -17,6 +17,5 @@ public class AbstractFactoryUIExerciseP3 implements Exercise {
         app.renderUI();
         System.out.println("----------------------------------------");
         app.renderUI();
-
     }
 }
